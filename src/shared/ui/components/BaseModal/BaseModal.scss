@@ -1,0 +1,56 @@
+@import "../../styles/variables";
+
+.base-modal {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Изменено на fixed для фиксирования окна */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1;
+  &__open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+  &__box  {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 52px 40px;
+    min-width: 280px;
+    min-height: 200px;
+    border-radius: 4px;
+    border: 1px solid #4B2964;
+    background-color: #250E36;
+
+
+    &__close-icon {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+
+      svg {
+        cursor: pointer;
+        &:hover {
+          path {
+            fill: #CBE1FF; // Изменяет цвет заливки path
+          }
+
+        }
+      }
+
+    }
+  }
+
+
+}

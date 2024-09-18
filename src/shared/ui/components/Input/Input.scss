@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+
+.input {
+  padding: 8px 12px;
+  border: 1px solid $color-gray-lighter;
+  border-radius: 6px;
+
+  &:focus {
+    border-color: #3893FF; // Изменение цвета границы при фокусе
+    outline: none; // Убираем стандартный контур при фокусе
+  }
+
+  &.error {
+    border-color: #FF0000;
+  }
+
+  &:disabled {
+    color: rgba(0, 0, 0, 0.5);
+    border-color: #6b6578;
+  }
+}

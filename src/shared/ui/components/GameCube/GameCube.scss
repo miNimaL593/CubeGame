@@ -1,0 +1,78 @@
+.game-cube {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: calc(100vh - 80px);
+
+
+  &__container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__cell {
+    max-width: 320px;
+    &:nth-child(2) {
+      margin: 16px 0;
+    }
+  }
+
+  &__cell-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    &__title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    &__text {
+      font-size: 16px;
+      color: #fff;
+
+    }
+  }
+
+  &__cell-middle {
+
+  }
+
+  &__title-box {
+    margin: 0 0 4px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+
+  &__buttons-box {
+   &__choice {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 8px;
+     > button:last-child {
+       max-width: 100%;
+     }
+
+
+     > button {
+       max-width: calc(50% - 4px);
+     }
+   }
+    &__place {
+      margin-top: 1rem;
+    }
+
+  }
+
+  &__buttons-box {
+    width: 320px;
+  }
+
+}

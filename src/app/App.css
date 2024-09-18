@@ -1,0 +1,11 @@
+* {
+    /*outline: 1px solid yellow !important;*/
+
+}
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+
+    background: linear-gradient(268.59deg, #0C0B1E 0.91%, #2A0F3B 51.75%, #0C0B1E 98.52%);
+
+}

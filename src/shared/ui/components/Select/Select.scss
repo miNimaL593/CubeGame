@@ -1,0 +1,65 @@
+@import '../../styles/variables';
+
+.select {
+  margin-bottom: 16px;
+  width: 100%;
+  position: relative;
+  font-size: 16px;
+
+
+  &__title {
+    margin: 0 0 6px 0;
+    color: #ffffff;
+    font-size: 14px;
+  }
+
+  &__header {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid $color-gray-lighter;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: #fff;
+
+    &.open {
+      border-color: #3893FF;
+    }
+  }
+
+  &__arrow {
+    width: 8px;
+    height: 4px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' fill='none' viewBox='0 0 8 4' stroke='%23C4C4C4'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M1 1l3 2 3-2' /%3E%3C/svg%3E") no-repeat center;
+    transition: transform 0.3s ease;
+
+
+    // Поворот стрелки при открытии
+    .select__header.open & {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__options {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid $color-gray-lighter;
+    border-radius: 6px;
+    max-height: 300px;
+    overflow-y: auto;
+
+
+  }
+  &__option-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(203, 213, 225, 0.2);
+    }
+  }
+
+}
